@@ -34,12 +34,12 @@ def settingup():
 
         "app": "C:\\Users\\veris\\Downloads\\updated_release\\Terminal-Plus-release (3).apk",
         "platformName": "Android",
-        "deviceName": "fc378d12",
+        "deviceName": "a9a95ab4",
         "appActivity": ".MainActivity",
         "appPackage": "com.veristerminal",
         "unicodeKeyboard": False,
         " resetKeyboard": False,
-        "platformVersion": "8.1",
+        "platformVersion": "7.1.1",
         "appiumVersion": "1.12.1"
     }
     walkin_details = {
@@ -85,25 +85,25 @@ def activity_complete(driver):
 def setting_contact(driver):
 
     driver.find_element_by_accessibility_id('enterMobileNumber').click()
-    driver.find_element_by_accessibility_id("8").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("1").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("3").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("8").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("6").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("7").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("1").click()
+    driver.find_element_by_accessibility_id("4").click()
     time.sleep(1)
     driver.find_element_by_accessibility_id("4").click()
     time.sleep(1)
-    driver.find_element_by_accessibility_id("9").click()
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
     time.sleep(1)
 
     driver.find_element_by_accessibility_id("checkmark").click()
