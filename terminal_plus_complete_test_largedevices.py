@@ -32,7 +32,7 @@ def settingup():
 
     desired_capabilities = {
 
-        "app": "C:\\Users\\veris\\Downloads\\updated_release\\Terminal-Plus-release (3).apk",
+        "app": "C:\\Users\\veris\\Downloads\\updated_release2\\Terminal-Plus-release (4).apk",
         "platformName": "Android",
         "deviceName": "a9a95ab4",
         "appActivity": ".MainActivity",
@@ -53,14 +53,31 @@ def settingup():
         "email": "mansisahu1480@gmail.com",
         "phone":"9993483676"
     }
+    invited_details = {
+        "firstname": "test_invite ",
+        "lastname": "test_invite_surname",
+        "email": "",
+        "phone":"3333333333"
+    }
+
     data={}
     data['desired_capabilities']=desired_capabilities
     data['walkin_details']=walkin_details
     data['member_details']=member_details
+    data['invited_details']=invited_details
     return data
 def login(driver):
-    element_id = driver.find_element_by_accessibility_id("Authorization ID")
+    time.sleep(3)
+    permission_buttons(driver)
 
+    time.sleep(10)
+    driver.press_keycode(4)
+    time.sleep(2)
+
+    driver.start_activity("com.veristerminal", ".MainActivity")
+    time.sleep(10)
+
+    element_id = driver.find_element_by_accessibility_id("Authorization ID")
     status = element_id.is_displayed()
     status = element_id.is_displayed()
     print(status)
@@ -81,31 +98,59 @@ def checkIn(driver):
 
 def activity_complete(driver):
     driver.find_element_by_accessibility_id('activityCompletedButton').click()
+def setting_contact_invite(driver):
+    driver.find_element_by_accessibility_id('enterMobileNumber').click()
+    for i in range(10):
+        driver.find_element_by_accessibility_id("3").click()
+        time.sleep(1)
+    """driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    """
+    driver.find_element_by_accessibility_id("checkmark").click()
+
 
 def setting_contact(driver):
 
     driver.find_element_by_accessibility_id('enterMobileNumber').click()
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
-    driver.find_element_by_accessibility_id("4").click()
-    time.sleep(1)
+    for i in range(1,11):
 
+        driver.find_element_by_accessibility_id("2").click()
+        time.sleep(1)
+    """driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id("4").click()
+    time.sleep(1)
+    """
     driver.find_element_by_accessibility_id("checkmark").click()
 
 def date_and_time(driver):
@@ -113,18 +158,15 @@ def date_and_time(driver):
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup').click()
     time.sleep(2)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]').click()
-    #today_date=date.text
-    #print(today_date)
 
     time.sleep(3)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup').click()
     time.sleep(2)
-    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]').click()
-    #today_time=times.text
-    #print(today_time)
+    driver.find_element_by_id('android:id/button1').click()
+    #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]').click()
     time.sleep(1)
     driver.find_element_by_accessibility_id('nextButton').click()
-    time.sleep(4)
+    time.sleep(2)
 def setting_contact_member(driver):
 
     driver.find_element_by_accessibility_id('enterMobileNumber').click()
@@ -162,11 +204,11 @@ def launch_application(desired_capabilities):
 def NDA_screen(driver):
     #driver.find_element_by_accessibility_id('signatureField')
     driver.find_elements_by_xpath('//android.view.ViewGroup[@content-desc="signatureField"]/android.widget.LinearLayout/android.view.View')
-    time.sleep(5)
+    time.sleep(1)
     user_action=TouchAction(driver)
-    user_action.press(x=166,y=978).move_to(x=377,y=915).release()
+    user_action.press(x=240,y=791).move_to(x=369,y=739).release()
     time.sleep(5)
-    user_action.tap(x=377, y=1223).perform()
+    user_action.tap(x=375, y=989).perform()
     time.sleep(2)
 
 def GOVT_Id_Screen(driver):
@@ -219,8 +261,8 @@ def Meeting_with_screen(driver):
 
 def Multi_select_screen(driver):
     driver.find_element_by_accessibility_id('dropdownFormComponentField').click()
-    time.sleep(5)
-    user_action = TouchAction(driver)
+    time.sleep(3)
+    """user_action = TouchAction(driver)
     user_action.tap(x=401, y=158).release().perform()
     time.sleep(3)
     user_action.tap(x=401, y=201).release().perform()
@@ -230,7 +272,15 @@ def Multi_select_screen(driver):
     time.sleep(3)
     driver.find_element_by_accessibility_id('nextButton').click()
     time.sleep(3)
-
+"""
+    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]').click()
+    time.sleep(3)
+    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
+    time.sleep(2)
+    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button').click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(3)
 def single_dropdown_screen(driver):
 
     driver.find_element_by_accessibility_id('dropdownFormComponentField').click()
@@ -238,10 +288,43 @@ def single_dropdown_screen(driver):
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
     # user_action.tap(x=400,y=203).release().perform()
     time.sleep(2)
-    user_action = TouchAction(driver)
-    user_action.tap(x=403, y=1211).release().perform()
+    #user_action = TouchAction(driver)
+    #user_action.tap(x=403, y=1211).release().perform()
     # driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button').click()
     # user_action.perform(x=400,y=1211).release().perform()
+    #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button').click()
+    #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button')
+    time.sleep(2)
+
+def General_Activity_Visitor(driver,visitor_details):
+    time.sleep(3)
+    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView').click()
+    setting_contact_member(driver)
+    time.sleep(2)
+    FLEP_Screen(driver,visitor_details)
+    time.sleep(2)
+    emergency_contact(driver)
+    time.sleep(2)
+    unique_id(driver)
+    time.sleep(1)
+    gender_Screen(driver)
+    driver.find_element_by_xpath(
+        '//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
+    time.sleep(1)
+    driver.find_element_by_xpath(
+        '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
+    time.sleep(2)
+    driver.find_element_by_xpath(
+        '//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
+    time.sleep(2)
+    driver.find_element_by_xpath(
+        '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
+    time.sleep(1)
+    driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(3)
+    camera(driver)
+    time.sleep(2)
+    activity_complete(driver)
     time.sleep(2)
 
 def General_Activity_Member(driver,member_details):
@@ -252,25 +335,34 @@ def General_Activity_Member(driver,member_details):
     time.sleep(2)
     FLEP_auto_fetch_member(driver,member_details)
     time.sleep(3)
-    emergency_details_autofetch(driver)
+    name=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency Contact Name"]/android.widget.EditText')
+    emer_name=name.text
+    print(emer_name)
+    if(emer_name == 'Nikhil Srivastava'):
+        print("Emergency contact test case passed")
+    else:
+        print("Emergency contact test case passed")
+    time.sleep(2)
+    phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency Contact"]/android.widget.EditText')
+    emer_phone=phone.text
+    print(emer_phone)
+    if(emer_phone == '9870656179'):
+        print("Emergency contact test case passed")
+    else:
+        print("Emergency contact test case failed")
     time.sleep(2)
     unique_id_autofetch(driver)
     time.sleep(3)
     gender_Screen(driver)
     time.sleep(3)
-    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[5]').click()
-    time.sleep(2)
-    driver.find_element_by_xpath('	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
+    driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
     time.sleep(1)
-    user_action=TouchAction(driver)
-    user_action.tap(x=399,y=1215).perform()
-    time.sleep(2)
-    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[6]').click()
-    time.sleep(2)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
     time.sleep(2)
-    user_action.tap(x=399, y=1215).perform()
+    driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
     time.sleep(2)
+    driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
+    time.sleep(1)
     driver.find_element_by_accessibility_id('nextButton').click()
     time.sleep(3)
     camera(driver)
@@ -285,6 +377,14 @@ def rating_Screen(driver):
     listss[3].click()
     time.sleep(1)
 
+def emergency_contact(driver):
+
+    driver.find_element_by_accessibility_id('Emergency contact name').send_keys('TOM')
+    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
+    time.sleep(1)
+    driver.find_element_by_accessibility_id('Emergency contact').send_keys('9988776655')
+    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
+    time.sleep(1)
 def gender_Screen(driver):
     time.sleep(2)
     gender = []
@@ -296,22 +396,19 @@ def gender_Screen(driver):
     if (status_radio == False):
         gender[0].click()
     time.sleep(1)
+
+def unique_id(driver):
+    time.sleep(2)
+    id =driver.find_element_by_accessibility_id('Unique_id')
+    driver.set_value(id,'test111')
+    time.sleep(2)
+
 def walk_in_visitor(driver,walkin_details):
 
     user_action=TouchAction(driver)
-    time.sleep(5)
-    permission_buttons(driver)
-    # time.sleep(2)
-    # driver.find_element_by_id('com.android.packageinstaller:id/permission_allow_button').click()
 
-    time.sleep(10)
-    driver.press_keycode(4)
-    time.sleep(2)
-
-    driver.start_activity("com.veristerminal", ".MainActivity")
-    time.sleep(10)
     # (new TouchAction(driver)).tap(385, 676).perform()
-    login(driver)
+
     time.sleep(10)
     checkIn(driver)
     time.sleep(3)
@@ -325,11 +422,9 @@ def walk_in_visitor(driver,walkin_details):
     FLEP_Screen(driver,walkin_details)
     time.sleep(3)
     Meeting_with_screen(driver)
-    time.sleep(2)
-    id =driver.find_element_by_accessibility_id('Unique_id')
-    driver.set_value(id,'test111')
-    time.sleep(2)
-
+    time.sleep(1)
+    unique_id(driver)
+    time.sleep(1)
     driver.execute_script('mobile:performEditorAction', {'action': 'done'})
     time.sleep(1)
     gender_Screen(driver)
@@ -343,12 +438,8 @@ def walk_in_visitor(driver,walkin_details):
     driver.find_element_by_accessibility_id('Address').send_keys('JMD')
     driver.execute_script('mobile:performEditorAction', {'action': 'done'})
     time.sleep(2)
-    driver.find_element_by_accessibility_id('Emergency contact name').send_keys('TOM')
-    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
-    time.sleep(1)
-    driver.find_element_by_accessibility_id('Emergency contact').send_keys('9988776655')
-    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
-    time.sleep(1)
+    emergency_contact(driver)
+    time.sleep(2)
     rating_Screen(driver)
     time.sleep(1)
     driver.find_element_by_accessibility_id('nextButton').click()
@@ -356,14 +447,15 @@ def walk_in_visitor(driver,walkin_details):
     driver.find_element_by_accessibility_id('Mansi Test').click()
     time.sleep(8)
     NDA_screen(driver)
-    time.sleep(5)
-    user_action.tap(x=296, y=1029).perform()
     time.sleep(3)
-    user_action.tap(x=492,y=1033).perform()
+    user_action.tap(x=285, y=809).perform()
+    time.sleep(2)
+    user_action.tap(x=482,y=810).perform()
+    #driver.find_element_by_accessibility_id('nextButton').click()
     #driver.find_element_by_accessibility_id('printButton').click()
     #time.sleep(5)
     #driver.find_element_by_accessibility_id('nextButton').click()
-    time.sleep(5)
+    time.sleep(3)
     date_and_time(driver)
     activity_complete(driver)
     time.sleep(3)
@@ -385,15 +477,42 @@ def check_out(driver):
     user_action = TouchAction(driver)
     user_action.tap(x=450, y=906).perform()
 
-def invited_user(driver):
+def invited_user(driver,visitor_details):
+
     checkIn(driver)
     time.sleep(3)
-    driver.find_element_by_accessibility_id('').click()
+    setting_contact_invite(driver)
     time.sleep(3)
     driver.find_element_by_accessibility_id('Invited').click()
-    #FLEP SCREEN
-    #Meeting with
+    FLEP_auto_fetch_visitor(driver,visitor_details)
+    meeting=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Whom To Meet"]/android.widget.EditText')
+    text=meeting.text
+    if(len(text)>0 and text == 'Mansi Sahu'):
+        print("Meeting with test case passed")
+    else:
+        print("Meeting with test case failed")
+    driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(2)
+    activity_complete(driver)
 
+def invited_auto_fetch(driver,visitor_details):
+    checkIn(driver)
+    time.sleep(3)
+    setting_contact_invite(driver)
+    time.sleep(3)
+    driver.find_element_by_accessibility_id('Invited').click()
+    FLEP_auto_fetch_visitor(driver,visitor_details)
+    meeting = driver.find_element_by_xpath(
+        '//android.view.ViewGroup[@content-desc="Whom To Meet"]/android.widget.EditText')
+    text = meeting.text
+    if (len(text) > 0 and text == 'Mansi Sahu'):
+        print("Meeting with test case passed")
+    else:
+        print("Meeting with test case failed")
+    driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(2)
+    activity_complete(driver)
+    time.sleep(1)
 def FLEP_auto_fetch_member(driver,member_details):
     time.sleep(5)
     Fname = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="First Name"]/android.widget.EditText')
@@ -423,10 +542,14 @@ def FLEP_auto_fetch_member(driver,member_details):
     print(status)
     text2 = Email.text
     print(text2)
-    if (len(text2) > 0 and text2 == member_details['email']):
-        print("Email autofetched test case passed")
+    if (len(text) == 0):
+        driver.set_value(Email,'test@invite.aacom')
+        time.sleep(3)
     else:
-        print("Email autofetched test case failed")
+        if (len(text2) > 0 and text2 == member_details['email']):
+            print("Email autofetched test case passed")
+        else:
+            print("Email autofetched test case failed")
 
     time.sleep(3)
     Phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Phone Number"]/android.widget.EditText')
@@ -441,6 +564,15 @@ def FLEP_auto_fetch_member(driver,member_details):
 
     time.sleep(2)
     driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(2)
+
+def walkin_member(driver,member_details):
+
+    checkIn(driver)
+    time.sleep(2)
+    setting_contact_member(driver)
+    time.sleep(2)
+    FLEP_auto_fetch_member(driver,member_details)
     time.sleep(2)
 
 def FLEP_auto_fetch_visitor(driver,visitor_details):
@@ -472,10 +604,14 @@ def FLEP_auto_fetch_visitor(driver,visitor_details):
     print(status)
     text2 = Email.text
     print(text2)
-    if (len(text2) > 0 and text2 == visitor_details['email']):
-        print("Email autofetched test case passed")
+    print(len(text2))
+    if(text2 == 'Email'):
+        driver.set_value(Email,'testinvite@a.nn')
     else:
-        print("Email autofetched test case failed")
+        if (len(text2) > 0 and text2 == visitor_details['email']):
+            print("Email autofetched test case passed")
+        else:
+            print("Email autofetched test case failed")
 
     time.sleep(3)
     Phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Phone Number"]/android.widget.EditText')
@@ -483,7 +619,7 @@ def FLEP_auto_fetch_visitor(driver,visitor_details):
     print(status)
     text4 = Phone.text
     print(text4)
-    if (len(text4) > 0):
+    if (len(text4) > 0 and Phone == visitor_details['phone']):
         print("Contact autofetched test case passed")
     else:
         print("Contact autofetched test case failed")
@@ -493,12 +629,13 @@ def FLEP_auto_fetch_visitor(driver,visitor_details):
     time.sleep(2)
 
 def emergency_details_autofetch(driver):
+
     print('Inside emergency code ')
     time.sleep(3)
     #emer_name = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact name"]/android.widget.EditText')
-    emer_name=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency Contact Name"]/android.widget.EditText')
-    status=emer_name.is_displayed()
-    print(status)
+
+    emer_name = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact name"]/android.widget.EditText')
+
     name = emer_name.text
     print(name)
     if (len(name) > 0):
@@ -517,7 +654,7 @@ def emergency_details_autofetch(driver):
 
 def unique_id_autofetch(driver):
     time.sleep(1)
-    id = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Unique_id"]/android.widget.EditText')
+    id = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Unique_Id"]/android.widget.EditText')
     my_id = id.text
     print(my_id)
     if (len(my_id) > 0):
@@ -526,29 +663,9 @@ def unique_id_autofetch(driver):
         print("Unique_id test case failed")
 
     time.sleep(1)
-def auto_fetch_user(driver,walkin_details):
 
-    status="Visitor"
-    """time.sleep(5)
-    permission_buttons(driver)
-    # time.sleep(2)
-    # driver.find_element_by_id('com.android.packageinstaller:id/permission_allow_button').click()
-    user_action=TouchAction(driver)
-    time.sleep(10)
-    driver.press_keycode(4)
+def cameraretake(driver):
     time.sleep(2)
-
-    driver.start_activity("com.veristerminal", ".MainActivity")
-    time.sleep(10)
-    # (new TouchAction(driver)).tap(385, 676).perform()
-    login(driver)
-    time.sleep(10)"""
-    time.sleep(3)
-    checkIn(driver)
-    time.sleep(5)
-    setting_contact(driver)
-    time.sleep(3)
-    driver.find_element_by_accessibility_id('Visitor').click()
     retakeButton = driver.find_element_by_accessibility_id("retakeButton")
     status = retakeButton.is_displayed()
     print(status)
@@ -559,7 +676,20 @@ def auto_fetch_user(driver,walkin_details):
 
     time.sleep(5)
     driver.find_element_by_accessibility_id("nextButton").click()
-    time.sleep(4)
+    time.sleep(1)
+
+def auto_fetch_user(driver,walkin_details):
+
+    #login(driver)
+    time.sleep(10)
+    checkIn(driver)
+    time.sleep(5)
+    setting_contact(driver)
+    time.sleep(3)
+    driver.find_element_by_accessibility_id('Visitor').click()
+    time.sleep(1)
+    cameraretake(driver)
+    time.sleep(2)
     FLEP_auto_fetch_visitor(driver,walkin_details)
     time.sleep(3)
     Meeting_with_screen(driver)
@@ -598,16 +728,15 @@ def auto_fetch_user(driver,walkin_details):
     driver.find_element_by_accessibility_id('nextButton').click()
     time.sleep(2)
     driver.find_element_by_accessibility_id('Mansi Test').click()
-    time.sleep(8)
+    time.sleep(2)
     NDA_screen(driver)
-    time.sleep(5)
     user_action=TouchAction(driver)
-    user_action.tap(x=296, y=1029).perform()
-    time.sleep(3)
-    user_action.tap(x=492, y=1033).perform()
+    user_action.tap(x=285, y=809).perform()
     # driver.find_element_by_accessibility_id('printButton').click()
-    # time.sleep(5)
-    # driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(2)
+    user_action.tap(x=482, y=810).perform()
+    time.sleep(2)
+    date_and_time(driver)
     time.sleep(2)
     activity_complete(driver)
     time.sleep(3)
@@ -629,14 +758,24 @@ def main():
     data={}
     data = settingup()
     driver=launch_application(data['desired_capabilities'])
-    walk_in_visitor(driver,data['walkin_details'])
-    time.sleep(10)
-    auto_fetch_user(driver,data['walkin_details'])
-    time.sleep(7)
+    login(driver)
+    #walk_in_visitor(driver,data['walkin_details'])
+    #time.sleep(2)
+    #auto_fetch_user(driver,data['walkin_details'])
+    #time.sleep(7)
+    #invited_user(driver,data['invited_details'])
+    #time.sleep(5)
+    #invited_auto_fetch(driver,data['invited_details'])
+    #time.sleep(5)
     General_Activity_Member(driver,data['member_details'])
-    #logout(driver)
-    #kill_server(driver)
-    #auto_fetch_walkin(driver)
+    time.sleep(5)
+    General_Activity_Visitor(driver,data['visitor_details'])
+    # logout(driver)
+    # kill_server(driver)
+    # auto_fetch_walkin(driver)
 
+    driver.quit()
+    driver.close_app()
+    driver.remove_app('com.veristerminal')
 if __name__ == "__main__":
     main()
