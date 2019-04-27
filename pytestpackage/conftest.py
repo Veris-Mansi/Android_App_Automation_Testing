@@ -1,6 +1,7 @@
 import pytest
 from utilities.Resources2 import *
 
+
 @pytest.fixture(scope='module')
 def data():
     start_server()
@@ -18,6 +19,22 @@ def driver(data):
     driver.close_app()
     driver.remove_app('com.veristerminal')
     driver.quit()"""
+
+@pytest.fixture()
+def status_test(self, driver):
+
+    status_test =False
+    print(status_test)
+    yield status_test
+    if (status_test == False):
+        a = WebDriverWait(driver, 5, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'cancelButton')))
+        s = a.is_diasplayed()
+        if (s == True):
+            a.click()
+        time.sleep(1)
+    else:
+        print("test case passed")
+
 """
 @pytest.fixture
 def driver(lists):

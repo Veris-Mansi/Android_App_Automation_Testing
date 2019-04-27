@@ -69,7 +69,6 @@ def settingup():
 def login(driver):
     time.sleep(3)
     permission_buttons(driver)
-
     time.sleep(10)
     driver.press_keycode(4)
     time.sleep(2)
@@ -251,28 +250,19 @@ def cardScanning(driver):
 def Meeting_with_screen(driver):
 
     meeting = driver.find_element_by_accessibility_id('Whom To Meet')
-    driver.set_value(meeting, "zxc")
+    driver.set_value(meeting, "man")
     time.sleep(3)
     #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]').click()
-    driver.find_element_by_accessibility_id('meetingWithDropdownField').click()
-    time.sleep(3)
+    driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="losmansi sahu"]/android.view.ViewGroup/android.widget.TextView[1]').click()
+    #driver.find_element_by_xpath('	//android.view.ViewGroup[@content-desc="losmansi sahu"]/android.view.ViewGroup')
+    #driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="losmansi sahu"]').click()
+    time.sleep(2)
     driver.hide_keyboard()
     time.sleep(1)
 
 def Multi_select_screen(driver):
     driver.find_element_by_accessibility_id('dropdownFormComponentField').click()
     time.sleep(3)
-    """user_action = TouchAction(driver)
-    user_action.tap(x=401, y=158).release().perform()
-    time.sleep(3)
-    user_action.tap(x=401, y=201).release().perform()
-    time.sleep(3)
-
-    user_action.tap(x=401, y=1205).release().perform()
-    time.sleep(3)
-    driver.find_element_by_accessibility_id('nextButton').click()
-    time.sleep(3)
-"""
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]').click()
     time.sleep(3)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
@@ -299,15 +289,17 @@ def single_dropdown_screen(driver):
 def General_Activity_Visitor(driver,visitor_details):
     time.sleep(3)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView').click()
-    setting_contact_member(driver)
+    setting_contact(driver)
     time.sleep(2)
     FLEP_Screen(driver,visitor_details)
     time.sleep(2)
     emergency_contact(driver)
     time.sleep(2)
     unique_id(driver)
+    driver.hide_keyboard()
     time.sleep(1)
     gender_Screen(driver)
+    time.sleep(2)
     driver.find_element_by_xpath(
         '//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
     time.sleep(1)
@@ -335,7 +327,7 @@ def General_Activity_Member(driver,member_details):
     time.sleep(2)
     FLEP_auto_fetch_member(driver,member_details)
     time.sleep(3)
-    name=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency Contact Name"]/android.widget.EditText')
+    name=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact name"]/android.widget.EditText')
     emer_name=name.text
     print(emer_name)
     if(emer_name == 'Nikhil Srivastava'):
@@ -343,29 +335,29 @@ def General_Activity_Member(driver,member_details):
     else:
         print("Emergency contact test case passed")
     time.sleep(2)
-    phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency Contact"]/android.widget.EditText')
+    phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact"]/android.widget.EditText')
     emer_phone=phone.text
     print(emer_phone)
     if(emer_phone == '9870656179'):
         print("Emergency contact test case passed")
     else:
         print("Emergency contact test case failed")
-    time.sleep(2)
+    time.sleep(5)
     unique_id_autofetch(driver)
     time.sleep(3)
     gender_Screen(driver)
     time.sleep(3)
-    driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
+    driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
     time.sleep(1)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
     time.sleep(2)
-    driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
+    driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
     time.sleep(2)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
     time.sleep(1)
     driver.find_element_by_accessibility_id('nextButton').click()
     time.sleep(3)
-    camera(driver)
+    cameraretake(driver)
     time.sleep(2)
     activity_complete(driver)
     time.sleep(2)
@@ -409,7 +401,7 @@ def walk_in_visitor(driver,walkin_details):
 
     # (new TouchAction(driver)).tap(385, 676).perform()
 
-    time.sleep(10)
+    time.sleep(2)
     checkIn(driver)
     time.sleep(3)
     setting_contact(driver)
@@ -619,7 +611,7 @@ def FLEP_auto_fetch_visitor(driver,visitor_details):
     print(status)
     text4 = Phone.text
     print(text4)
-    if (len(text4) > 0 and Phone == visitor_details['phone']):
+    if (len(text4) > 0):
         print("Contact autofetched test case passed")
     else:
         print("Contact autofetched test case failed")
@@ -653,9 +645,9 @@ def emergency_details_autofetch(driver):
         print("Emergency phone case failed")
 
 def unique_id_autofetch(driver):
-    time.sleep(1)
-    id = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Unique_Id"]/android.widget.EditText')
-    my_id = id.text
+    time.sleep(2)
+    uniqid=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Unique_id"]/android.widget.EditText')
+    my_id = uniqid.text
     print(my_id)
     if (len(my_id) > 0):
         print("Unique_id test case passed")
@@ -766,13 +758,12 @@ def main():
     #invited_user(driver,data['invited_details'])
     #time.sleep(5)
     #invited_auto_fetch(driver,data['invited_details'])
-    #time.sleep(5)
+    time.sleep(5)
     General_Activity_Member(driver,data['member_details'])
     time.sleep(5)
-    General_Activity_Visitor(driver,data['visitor_details'])
-    # logout(driver)
-    # kill_server(driver)
-    # auto_fetch_walkin(driver)
+    General_Activity_Visitor(driver,data['walkin_details'])
+    logout(driver)
+    #auto_fetch_walkin(driver)
 
     driver.quit()
     driver.close_app()

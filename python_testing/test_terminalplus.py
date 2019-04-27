@@ -1,148 +1,98 @@
-import time
+import pytest
 
-from appium import webdriver
-from appium.webdriver.common.touch_action import TouchAction
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
+from python_testing.Files.Resources import *
 
 
-def set_up():
-
-    desired_capabilities = {
-
-        "app": "C:\\Users\\veris\\Downloads\\terminal plus updated release\\Terminal-Plus-release (2).apk",
-        "platformName": "Android",
-        "deviceName": "fc378d12",
-        "appActivity": ".MainActivity",
-        "appPackage": "com.veristerminal",
-        "unicodeKeyboard": False,
-        " resetKeyboard": False,
-        "platformVersion": "8.1",
-        "appiumVersion": "1.12.1"
-    }
-
-def test_walk_in_visitor():
-    set_up()
-    driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_capabilities)
-
-    for i in range(2):
-        driver.find_element_by_id('com.android.packageinstaller:id/permission_allow_button').click()
-        time.sleep(2)
-
-    # time.sleep(2)
-    # driver.find_element_by_id('com.android.packageinstaller:id/permission_allow_button').click()
-
-    time.sleep(10)
-    driver.press_keycode(4)
+@pytest.fixture(scope='module')
+def lists():
+    print("====setup====")
+    start_server()
     time.sleep(2)
-    driver.start_activity("com.veristerminal", ".MainActivity")
-    time.sleep(10)
-    # (new TouchAction(driver)).tap(385, 676).perform()
+    lists=[]
+    data={}
+    data = settingup()
+    driver = launch_application(data['desired_capabilities'])
+    lists.append(driver)
+    lists.append(data)
+    yield lists
+    print("====teardown====")
+    driver = lists[0]
+    driver.close_app()
+    driver.remove_app('com.veristerminal')
+    driver.quit()
 
-    element_id = driver.find_element_by_accessibility_id("Authorization ID")
+def test_login(lists):
 
-    status = element_id.is_displayed()
-    status = element_id.is_displayed()
-    print(status)
-    driver.set_value(element_id, "V")
+    time.sleep(3)
+    driver = lists[0]
+    login(driver)
 
-    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
-    time.sleep(2)
-    element_code = driver.find_element_by_accessibility_id("Authorization Code")
-    driver.set_value(element_code, "9")
 
-    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("loginButton").click()
-    time.sleep(20)
-    driver.find_element_by_accessibility_id('Check-In').click()
-    time.sleep(10)
-    driver.find_element_by_accessibility_id('enterMobileNumber').click()
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("7").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("6").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(5)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(5)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(5)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(5)
+def test_walkinvisitor(lists):
 
-    driver.find_element_by_accessibility_id("checkmark").click()
-    time.sleep(10)
-    driver.find_element_by_accessibility_id("USER_ID").click()
-    time.sleep(10)
-
-    driver.find_element_by_accessibility_id("clickImageButton").click()
-
-    driver.find_element_by_accessibility_id("nextButton").click()
-    time.sleep(10)
-    driver.find_element_by_accessibility_id("cardScanClickImageButton").click()
-
-    driver.find_element_by_accessibility_id("cardScanNextButton").click()
+    driver=lists[0]
+    mydata=lists[1]
+    walkin_details=mydata['walkin_details']
+    user_action=TouchAction(driver)
     time.sleep(2)
-
-    name = driver.find_element_by_accessibility_id("Enter First namr")
-    myname = name.get_attribute('text')
-    print(myname)
-    if (len(myname) > 0):
-        driver.set_value(name, "MANSI")
-        time.sleep(5)
-
-    driver.find_element_by_accessibility_id("nextButton").click()
-    time.sleep(5)
-    driver.find_element_by_accessibility_id('activityCompletedButton').click()
-    time.sleep(5)
-
-    user_action = TouchAction(driver)
-    user_action.tap(x=450, y=906).perform()
-
-    time.sleep(10)
-
-    driver.find_element_by_accessibility_id('Check-Out').click()
-    time.sleep(5)
-    driver.find_element_by_accessibility_id('enterMobileNumber').click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("7").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("9").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("6").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(2)
-    driver.find_element_by_accessibility_id("5").click()
-    time.sleep(2)
-
-    driver.find_element_by_accessibility_id("nextButton").click()
-    time.sleep(5)
-    driver.find_element_by_accessibility_id('activityCompletedButton').click()
-
-    user_action = TouchAction(driver)
-    user_action.tap(x=450, y=906).perform()
+    checkIn(driver)
     assert True
+    time.sleep(3)
+    setting_contact(driver)
+    assert True
+    time.sleep(7)
+    driver.find_element_by_accessibility_id("Visitor").click()
+    assert True
+    time.sleep(3)
+    camera(driver)
+    assert True
+    time.sleep(2)
+    FLEP_Screen(driver,walkin_details)
+    assert True
+    time.sleep(3)
+    Meeting_with_screen(driver)
+    assert True
+    time.sleep(1)
+    unique_id(driver)
+    assert True
+    time.sleep(1)
+    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
+    time.sleep(1)
+    gender_Screen(driver)
+    assert True
+    time.sleep(3)
+    Multi_select_screen(driver)
+    assert True
+    time.sleep(1)
+    cardScanning(driver)
+    time.sleep(1)
+    single_dropdown_screen(driver)
+    time.sleep(2)
+    driver.find_element_by_accessibility_id('Address').send_keys('JMD')
+    driver.execute_script('mobile:performEditorAction', {'action': 'done'})
+    time.sleep(2)
+    emergency_contact(driver)
+    time.sleep(2)
+    rating_Screen(driver)
+    time.sleep(1)
+    driver.find_element_by_accessibility_id('nextButton').click()
+    time.sleep(3)
+    driver.find_element_by_accessibility_id('Mansi Test').click()
+    time.sleep(3)
+    NDA_screen(driver)
+    time.sleep(3)
+    user_action.tap(x=285, y=809).perform()
+    time.sleep(2)
+    user_action.tap(x=482,y=810).perform()
+    time.sleep(3)
+    date_and_time(driver)
+    activity_complete(driver)
 
-def teardown_module(module):
-    print("All tests done")
+    assert True
+    time.sleep(3)
+
+    #user_action.tap(x=450, y=906).perform()
+    #time.sleep(10)
+
+    check_out(driver)
+    return True

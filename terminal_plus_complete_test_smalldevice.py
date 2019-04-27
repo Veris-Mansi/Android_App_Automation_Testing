@@ -209,10 +209,10 @@ def cardScanning(driver):
 def Meeting_with_screen(driver):
 
     meeting = driver.find_element_by_accessibility_id('Whom To Meet')
-    driver.set_value(meeting, "zxc")
+    driver.set_value(meeting, "man")
     time.sleep(3)
     #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]').click()
-    driver.find_element_by_accessibility_id('meetingWithDropdownField').click()
+    driver.find_element_by_accessibility_id('losmansi sahu').click()
     time.sleep(3)
     driver.hide_keyboard()
     time.sleep(1)
@@ -234,10 +234,10 @@ def Multi_select_screen(driver):
 def single_dropdown_screen(driver):
 
     driver.find_element_by_accessibility_id('dropdownFormComponentField').click()
-    time.sleep(5)
+    time.sleep(2)
     driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
     # user_action.tap(x=400,y=203).release().perform()
-    time.sleep(2)
+    time.sleep(1)
     user_action = TouchAction(driver)
     user_action.tap(x=403, y=1211).release().perform()
     # driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button').click()
