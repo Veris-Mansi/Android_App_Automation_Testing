@@ -18,12 +18,12 @@ def settingup():
 
         "app": "C:\\Users\\veris\\Downloads\\updated_release2\\Terminal-Plus-release (4).apk",
         "platformName": "Android",
-        "deviceName": "RZ8M30B0LNZ",
+        "deviceName": "a9a95ab4",
         "appActivity": ".MainActivity",
         "appPackage": "com.veristerminal",
         "unicodeKeyboard": False,
         " resetKeyboard": False,
-        "platformVersion": "9",
+        "platformVersion": "7.1.1",
         "appiumVersion": "1.12.1"
     }
     walkin_details = {
@@ -45,11 +45,20 @@ def settingup():
         "Emergency_contact": "9992223331"
     }
     invited_details = {
-        "firstname": "test_invite ",
+        "firstname": "test_invite",
         "lastname": "test_invite_surname",
-        "email": "",
+        "email": "testinvite@a.nn",
         "phone":"3333333333"
 
+    },
+    offline_walkin_details = {
+        "firstname": "offline_name",
+        "lastname": "test_surname",
+        "email": "test@test.com",
+        "unique_id": "test111",
+        "address": "JMD",
+        "Emergency_contact_name": "TOM",
+        "Emergency_contact": "9988776655"
     }
 
     data={}
@@ -58,6 +67,19 @@ def settingup():
     data['member_details']=member_details
     data['invited_details']=invited_details
     return data
+
+def statusOftest(status_test,driver):
+    if (status_test == False):
+        print("test case failed")
+        a = WebDriverWait(driver, 5, poll_frequency=0.05).until(
+            EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'cancelButton')))
+        s = a.is_diasplayed()
+        if (s == True):
+            a.click()
+        time.sleep(1)
+    else:
+        print("test case passed")
+
 
 def permission_buttons(driver):
     for i in range(2):
@@ -71,7 +93,7 @@ def launch_application(desired_capabilities):
 def login(driver):
     time.sleep(0.5)
     permission_buttons(driver)
-    time.sleep(1)
+    time.sleep(1.5)
     driver.press_keycode(4)
     time.sleep(0.5)
     driver.start_activity("com.veristerminal", ".MainActivity")
@@ -89,6 +111,7 @@ def login(driver):
 def checkIn(driver):
 
     checkin=WebDriverWait(driver, 10, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"Check-In")))
+    takeScreenshot(driver)
     checkin.click()
     assert True
 def setting_contact_invite(driver):
@@ -99,13 +122,14 @@ def setting_contact_invite(driver):
         no.click()
 
     next=WebDriverWait(driver, 2, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"checkmark")))
+    takeScreenshot(driver)
     next.click()
 def setting_contact(driver):
     phone = WebDriverWait(driver, 1, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
     phone.click()
     contact_no = ""
     i="7"
-    j="2"
+    j="6"
     for k in range(5):
         driver.find_element_by_accessibility_id(i).click()
         contact_no=contact_no+i
@@ -115,44 +139,47 @@ def setting_contact(driver):
         contact_no = contact_no + j
     #next = WebDriverWait(driver, 2, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "checkmark")))
     #next.click()
+    takeScreenshot(driver)
     driver.find_element_by_accessibility_id('checkmark').click()
     assert True
     return contact_no
-def setting_contact_member(driver):
-    phone = WebDriverWait(driver, 3, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
+
+def setting_contact_offline(driver):
+    phone = WebDriverWait(driver, 1, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
     phone.click()
+    contact_no = ""
+    i="9"
+    j="1"
+    for k in range(5):
+        driver.find_element_by_accessibility_id(i).click()
+        contact_no=contact_no+i
+    for k in range(5):
 
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 9)))
-    no.click()
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 9)))
-    no.click()
+        driver.find_element_by_accessibility_id(j).click()
+        contact_no = contact_no + j
+    #next = WebDriverWait(driver, 2, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "checkmark")))
+    #next.click()
+    takeScreenshot(driver)
+    driver.find_element_by_accessibility_id('checkmark').click()
+    assert True
+    return contact_no
 
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 9)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 3)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 4)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 8)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 3)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 6)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 7)))
-    no.click()
-
-    no = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 6)))
-    no.click()
-
-    driver.find_element_by_accessibility_id("checkmark").click()
+def setting_contact_member(driver):
+    phone = WebDriverWait(driver, 4, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
+    phone.click()
+    time.sleep(0.05)
+    driver.find_element_by_accessibility_id("9").click()
+    driver.find_element_by_accessibility_id("9").click()
+    driver.find_element_by_accessibility_id("9").click()
+    driver.find_element_by_accessibility_id("3").click()
+    driver.find_element_by_accessibility_id("4").click()
+    driver.find_element_by_accessibility_id("8").click()
+    driver.find_element_by_accessibility_id("3").click()
+    driver.find_element_by_accessibility_id("6").click()
+    driver.find_element_by_accessibility_id("7").click()
+    driver.find_element_by_accessibility_id("6").click()
     next = WebDriverWait(driver, 2, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "checkmark")))
+    takeScreenshot(driver)
     next.click()
     assert True
 def camera(driver):
@@ -163,6 +190,7 @@ def camera(driver):
     else:
         assert False
     btn=WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "nextButton")))
+    takeScreenshot(driver)
     btn.click()
     assert True
     #time.sleep(10)
@@ -175,6 +203,7 @@ def cameraretake(driver):
         print("Image not autofetched test case failed")
         assert False
     btn = WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "nextButton")))
+    takeScreenshot(driver)
     btn.click()
     assert True
 
@@ -207,67 +236,57 @@ def FLEP_Screen(driver,walkin_details,contact):
     print(num)
     assert num == contact
     #time.sleep(3)
+    takeScreenshot(driver)
     driver.find_element_by_accessibility_id('nextButton').click()
     #time.sleep(2)
 
 def FLEP_auto_fetch_member(driver,member_details):
-    time.sleep(5)
+    #time.sleep(5)
     Fname = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="First Name"]/android.widget.EditText')
-    status = Fname.is_displayed()
-    print(status)
     text = Fname.text
     print(text)
-    if (len(text) > 0 and text == member_details['firstname']):
-        print("Fname autofetched test case passed")
-    else:
-        print("Fname autofetched test case failed")
-
-    time.sleep(3)
+    assert text == member_details['firstname']
+    #time.sleep(3)
     Lname = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Last Name"]/android.widget.EditText')
     status = Lname.is_displayed()
     print(status)
     text1 = Lname.text
     print(text1)
-    if (len(text1) > 0 and text1 == member_details['lastname']):
-        print("Lname autofetched test case passed")
-    else:
-        print("Lname autofetched test case failed")
-
-    time.sleep(3)
-    Email = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Email"]/android.widget.EditText')
-    status = Email.is_displayed()
-    print(status)
-    text2 = Email.text
+    assert text1 == member_details['lastname']
+    email = WebDriverWait(driver, 2, poll_frequency=0.05).until(EC.presence_of_element_located((By.XPATH, '//android.view.ViewGroup[@content-desc="Email"]/android.widget.EditText')))
+    #Email = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Email"]/android.widget.EditText')
+    text2 = email.text
     print(text2)
-    if (len(text) == 0):
-        driver.set_value(Email,'test@invite.aacom')
-        time.sleep(3)
+    if (len(text2) == 0):
+        driver.set_value(email,'testinvite@a.nn')
+        #time.sleep(0.5)
     else:
+        print(text2)
+        print(member_details['email'])
         if (len(text2) > 0 and text2 == member_details['email']):
-            print("Email autofetched test case passed")
+            assert True
         else:
-            print("Email autofetched test case failed")
+            assert False
 
-    time.sleep(3)
+    #time.sleep(3)
     Phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Phone Number"]/android.widget.EditText')
-    status = Phone.is_displayed()
-    print(status)
     text4 = Phone.text
     print(text4)
     if (len(text4) > 0 and text4 == member_details['phone']):
-        print("Contact autofetched test case passed")
+        assert True
+        #print("Contact autofetched test case passed")
     else:
+        assert False
         print("Contact autofetched test case failed")
 
-    time.sleep(2)
+    #time.sleep(2)
+    takeScreenshot(driver)
     driver.find_element_by_accessibility_id('nextButton').click()
-    time.sleep(2)
+    #time.sleep(2)
 
 def FLEP_auto_fetch_visitor(driver,visitor_details,contact_no):
-    time.sleep(5)
+    #time.sleep(5)
     Fname = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="First Name"]/android.widget.EditText')
-    status = Fname.is_displayed()
-    print(status)
     text = Fname.text
     print(text)
     assert text == visitor_details['firstname']
@@ -276,10 +295,7 @@ def FLEP_auto_fetch_visitor(driver,visitor_details,contact_no):
     else:
         print("Fname autofetched test case failed")"""
 
-    time.sleep(1)
     Lname = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Last Name"]/android.widget.EditText')
-    status = Lname.is_displayed()
-    print(status)
     text1 = Lname.text
     print(text1)
     assert text1 == visitor_details['lastname']
@@ -288,10 +304,7 @@ def FLEP_auto_fetch_visitor(driver,visitor_details,contact_no):
     else:
         print("Lname autofetched test case failed")
     """
-    time.sleep(1)
     Email = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Email"]/android.widget.EditText')
-    status = Email.is_displayed()
-    print(status)
     text2 = Email.text
     print(text2)
     print(len(text2))
@@ -307,8 +320,6 @@ def FLEP_auto_fetch_visitor(driver,visitor_details,contact_no):
 
     time.sleep(1)
     Phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Phone Number"]/android.widget.EditText')
-    status = Phone.is_displayed()
-    print(status)
     text4 = Phone.text
     print(text4)
     assert text4 == contact_no
@@ -317,14 +328,15 @@ def FLEP_auto_fetch_visitor(driver,visitor_details,contact_no):
     else:
         print("Contact autofetched test case failed")
     """
-    time.sleep(1)
+    #time.sleep(1)
+    takeScreenshot(driver)
     driver.find_element_by_accessibility_id('nextButton').click()
-    time.sleep(2)
+    #time.sleep(2)
 
 def Meeting_with_screen(driver):
 
     meeting = driver.find_element_by_accessibility_id('Whom To Meet')
-    driver.set_value(meeting, "man")
+    driver.set_value(meeting, "tes")
     #time.sleep(3)
     el=WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.XPATH, '//android.view.ViewGroup[@content-desc="losmansi sahu"]/android.view.ViewGroup/android.widget.TextView[1]')))
     el.click()
@@ -368,10 +380,18 @@ def Multi_select_screen(driver):
     #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button').click()
     assert True
     b = WebDriverWait(driver, 5, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"nextButton")))
+    takeScreenshot(driver)
     b.click()
     assert True
     #driver.find_element_by_accessibility_id('nextButton').click()
 
+def takeScreenshot(driver):
+    ts=time.strftime("%Y_%m_%d_%H:%M:%S")
+    activity=driver.current_activity
+    file_name=ts+activity+".png"
+    print(file_name)
+    #//pytestpackage/screenshot
+    driver.save_screenshot("./screenshots"+file_name)
 def single_dropdown_screen(driver):
 
     driver.find_element_by_accessibility_id('dropdownFormComponentField').click()
@@ -417,6 +437,7 @@ def NDA_screen(driver):
     user_action=TouchAction(driver)
     user_action.press(x=240,y=791).move_to(x=369,y=739).release()
     time.sleep(5)
+    takeScreenshot(driver)
     user_action.tap(x=375, y=989).perform()
     #time.sleep(2)
 def date_and_time(driver):
@@ -426,6 +447,7 @@ def date_and_time(driver):
     #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup').click()
     #time.sleep(2)
     p = WebDriverWait(driver, 5, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,'/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]')))
+    takeScreenshot(driver)
     p.click()
 
     #driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]').click()
@@ -444,12 +466,13 @@ def GOVT_Id_Screen(driver):
     #driver.find_element_by_accessibility_id("cardScanClickImageButton").click()
     #time.sleep(10)
     b = WebDriverWait(driver, 10, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "cardScanNextButton")))
+    takeScreenshot(driver)
     b.click()
    # driver.find_element_by_accessibility_id("cardScanNextButton").click()
     #time.sleep(5)
 
 def Govt_Id_Retake(driver):
-    time.sleep(5)
+    #time.sleep(5)
     retakeButton=WebDriverWait(driver, 10, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "cardScanRetakeButton")))
     #retakeButton = driver.find_element_by_accessibility_id("cardScanRetakeButton")
     status_card = retakeButton.is_displayed()
@@ -462,18 +485,21 @@ def Govt_Id_Retake(driver):
         print("Image not autofetched test case failed")
     #time.sleep(10)
     b = WebDriverWait(driver, 10, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "cardScanNextButton")))
+    takeScreenshot(driver)
     b.click()
     # driver.find_element_by_accessibility_id("cardScanNextButton").click()
     #time.sleep(2)
 def activity_complete(driver):
     #driver.find_element_by_accessibility_id('activityCompletedButton').click()
     b = WebDriverWait(driver, 3, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"activityCompletedButton")))
+    takeScreenshot(driver)
     b.click()
 
 def check_out(driver):
     #time.sleep(1)
     #driver.find_element_by_accessibility_id('Check-Out').click()
     checkin = WebDriverWait(driver, 10, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Check-Out")))
+    takeScreenshot(driver)
     checkin.click()
     assert True
     #time.sleep(5)
@@ -482,16 +508,16 @@ def check_out(driver):
     activity_complete(driver)
 
     user_action = TouchAction(driver)
+    takeScreenshot(driver)
     user_action.tap(x=450, y=906).perform()
 
 def emergency_details_autofetch(driver,walkin_details):
 
-    print('Inside emergency code ')
-    time.sleep(3)
+    #print('Inside emergency code ')
+    #time.sleep(3)
     #emer_name = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact name"]/android.widget.EditText')
 
     emer_name = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact name"]/android.widget.EditText')
-
     name = emer_name.text
     print(name)
     """if (len(name) > 0):
@@ -500,7 +526,7 @@ def emergency_details_autofetch(driver,walkin_details):
         print("Emergency name case failed")
     """
     assert name == walkin_details['Emergency_contact_name']
-    time.sleep(2)
+    #time.sleep(2)
     emer_phone = driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="Emergency contact"]/android.widget.EditText')
     phone = emer_phone.text
     print(phone)
@@ -509,4 +535,60 @@ def emergency_details_autofetch(driver,walkin_details):
         print("Emergency phone test case passed")
     else:
         print("Emergency phone case failed")
+    """
+def general_activity_dropdown(driver):
+    f = WebDriverWait(driver, 3, poll_frequency=0.5).until(EC.presence_of_element_located(
+        (By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup')))
+    f.click()
+    # self.driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
+    # time.sleep(1)
+    f = WebDriverWait(driver, 3, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,
+                                                                                                '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]')))
+    f.click()
+    f = WebDriverWait(driver, 3, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,
+                                                                                                '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]')))
+    f.click()
+    # self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
+    # time.sleep(2)
+    f = WebDriverWait(driver, 3, poll_frequency=0.5).until(EC.presence_of_element_located(
+        (By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup')))
+    f.click()
+    # self.driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
+    # time.sleep(2)
+    f = WebDriverWait(driver, 3, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,
+                                                                                                '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]')))
+    f.click()
+
+def logout(driver):
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "settingsButton")))
+    settings.click()
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Authorization Code")))
+    settings.send_keys("1")
+    driver.hide_keyboard()
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "settings")))
+    settings.click()
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,
+                                                                                                  '//android.view.ViewGroup[@content-desc="logOutTerminal"]/android.view.ViewGroup/android.view.ViewGroup')))
+    settings.click()
+    c = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ID, "android:id/button1")))
+    c.click()
+
+    """
+    driver.find_element_by_accessibility_id('settingsButton').click()
+    #time.sleep(3)
+    driver.find_element_by_accessibility_id('Authorization Code').send_keys("1")
+    time.sleep(1)
+    driver.hide_keyboard()
+    time.sleep(2)
+    driver.find_element_by_accessibility_id('settings').click()
+    time.sleep(2)
+    driver.find_element_by_xpath(
+        '//android.view.ViewGroup[@content-desc="logOutTerminal"]/android.view.ViewGroup/android.view.ViewGroup').click()
+    time.sleep(2)
+    driver.find_element_by_id('android:id/button1').click()
+    time.sleep(2)
     """

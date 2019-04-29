@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="85047499-b5f9-47f2-8498-0cefc01eeff0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QR_Code_Scanning.py" beforeDir="false" afterPath="$PROJECT_DIR$/QR_Code_Scanning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terminal-Plus_Complete_Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal-Plus_Complete_Testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytestpackage/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytestpackage/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytestpackage/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/pytestpackage/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_testing/Files/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_testing/Files/Resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_testing/test_terminal_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_testing/test_terminal_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_testing/test_terminalplus.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_testing/test_terminalplus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terminal_plus_complete_test_largedevices.py" beforeDir="false" afterPath="$PROJECT_DIR$/terminal_plus_complete_test_largedevices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terminal_plus_complete_test_smalldevice.py" beforeDir="false" afterPath="$PROJECT_DIR$/terminal_plus_complete_test_smalldevice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilities/Resources2.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/Resources2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,24 +41,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pytestpackage/conftest.py">
+        <entry file="file://$PROJECT_DIR$/python_testing/test_terminal_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            <state relative-caret-position="1162">
+              <caret line="250" column="21" lean-forward="true" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/terminal_plus_complete_test_largedevices.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="285">
+              <caret line="136" column="7" lean-forward="true" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#100#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +79,80 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Resources2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="558">
+              <caret line="593" column="7" selection-start-line="593" selection-start-column="7" selection-end-line="593" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_generalActivity.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_Invites.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding>
+                <element signature="e#1#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_logout.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_walkin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-195">
+              <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_testing/Files/Resources.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="162" column="19" selection-start-line="162" selection-start-column="19" selection-end-line="162" selection-end-column="19" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -94,36 +171,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>emergency_</find>
-      <find>setting_c</find>
-      <find>emergency_d</find>
-      <find>NDA_screen</find>
-      <find>Govt_Id_Retake</find>
-      <find>unique_id_autofetch</find>
-      <find>FLEP_auto_fetch_visitor</find>
-      <find>setting_contact</find>
-      <find>FLEP_auto_fetch</find>
-      <find>gener</find>
-      <find>invited_a</find>
-      <find>login</find>
-      <find>camera</find>
-      <find>Meeting</find>
-      <find>gender_Screen</find>
-      <find>Multi_select_screen</find>
+      <find>Govt</find>
       <find>emergency_details_autofetch</find>
-      <find>emergency_con</find>
-      <find>Go</find>
-      <find>NDA</find>
-      <find>mu</find>
+      <find>statusO</find>
+      <find>tak</find>
+      <find>takeS</find>
       <find>setti</find>
-      <find>FLE</find>
-      <find>sett</find>
+      <find>FLEP_aut</find>
+      <find>NDA</find>
+      <find>status</find>
+      <find>takeScreenshot</find>
+      <find>statusOftest</find>
+      <find>setting</find>
+      <find>takeSc</find>
       <find>check</find>
-      <find>unique</find>
-      <find>emerg</find>
-      <find>Emergency_contact</find>
-      <find>rati</find>
-      <find>log</find>
+      <find>checkIn</find>
+      <find>take</find>
+      <find>chec</find>
+      <find>setting_contact_member</find>
+      <find>login</find>
+      <find>setting_con</find>
+      <find>FLEp_a</find>
+      <find>FLEP_a</find>
+      <find>takeScree</find>
+      <find>FLEP_auto_fetch_member</find>
+      <find>invited_details</find>
+      <find>FLEP_</find>
+      <find>FLEP</find>
+      <find>takeScreen</find>
+      <find>setting_</find>
+      <find>logout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,9 +236,15 @@
         <option value="$PROJECT_DIR$/python_testing/Files/Resources.py" />
         <option value="$PROJECT_DIR$/python_testing/Resources2.py" />
         <option value="$PROJECT_DIR$/python_testing/test_terminal_class2.py" />
-        <option value="$PROJECT_DIR$/utilities/Resources2.py" />
         <option value="$PROJECT_DIR$/pytestpackage/conftest.py" />
+        <option value="$PROJECT_DIR$/pytestpackage/.pytest_cache/test_conftest_login.py" />
         <option value="$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py" />
+        <option value="$PROJECT_DIR$/pytestpackage/test_conftest_login.py" />
+        <option value="$PROJECT_DIR$/pytestpackage/test_conftest_Invites.py" />
+        <option value="$PROJECT_DIR$/pytestpackage/test_conftest_generalActivity.py" />
+        <option value="$PROJECT_DIR$/pytestpackage/test_conftest_logout.py" />
+        <option value="$PROJECT_DIR$/utilities/Resources2.py" />
+        <option value="$PROJECT_DIR$/pytestpackage/test_conftest_walkin.py" />
       </list>
     </option>
   </component>
@@ -193,7 +276,13 @@
             <path>
               <item name="Test1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test1" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="python_testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test1" type="462c0819:PsiDirectoryNode" />
+              <item name="python_testing" type="462c0819:PsiDirectoryNode" />
+              <item name="Files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Test1" type="b2602c69:ProjectViewProjectNode" />
@@ -469,7 +558,9 @@
       <workItem from="1556023760720" duration="3660000" />
       <workItem from="1556087797285" duration="20770000" />
       <workItem from="1556173288710" duration="26294000" />
-      <workItem from="1556284462961" duration="36746000" />
+      <workItem from="1556284462961" duration="38287000" />
+      <workItem from="1556512431073" duration="2314000" />
+      <workItem from="1556519512407" duration="27446000" />
     </task>
     <servers />
   </component>
@@ -497,7 +588,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="336088000" />
+    <option name="totallyTimeSpent" value="367389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +603,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5714286" visible="true" weight="0.101208456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5714286" visible="true" weight="0.23867069" />
       <window_info id="Favorites" order="1" sideWeight="0.42857143" side_tool="true" weight="0.25528702" />
       <window_info id="Structure" order="2" sideWeight="0.504717" weight="0.19486405" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -526,17 +617,51 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151056" side_tool="true" weight="0.3843648" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848944" weight="0.95114005" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848944" visible="true" weight="0.32736155" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.38925081" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32930514" />
+      <window_info anchor="right" id="Database" order="4" side_tool="true" weight="0.32930514" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5714286" visible="true" weight="0.10271903" />
+      <window_info id="Favorites" order="1" sideWeight="0.42857143" side_tool="true" weight="0.25528702" />
+      <window_info id="Structure" order="2" sideWeight="0.504717" weight="0.19486405" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.41856676" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.12703583" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32736155" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151056" side_tool="true" weight="0.3843648" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848944" visible="true" weight="0.24592833" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.38925081" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
       <window_info anchor="right" id="Database" order="4" side_tool="true" weight="0.32930514" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test1$Unittests_for_test_terminal_class_TestTerminal_test_login.coverage" NAME="Unittests for test_terminal_class.TestTerminal.test_login Coverage Results" MODIFIED="1556173448433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_testing" />
@@ -719,32 +844,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python_testing/.pytest_cache/test_terminal_class.py" />
     <entry file="file://$PROJECT_DIR$/python_testing/Resources.py" />
-    <entry file="file://$PROJECT_DIR$/terminal_plus_complete_test_largedevices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FirstTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="72" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_testing/test_terminal_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -766,22 +871,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_testing/Resources2.py">
+    <entry file="file://$PROJECT_DIR$/python_testing/Resources2.py" />
+    <entry file="file://$PROJECT_DIR$/pytestpackage/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_testing/Files/Resources.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="173" column="56" selection-start-line="173" selection-start-column="56" selection-end-line="173" selection-end-column="56" />
+        <state relative-caret-position="255">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_143240.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_143228.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_143221.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_143124.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_143115.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_143027.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_142943.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_142929.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_142920.MainActivity.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/report.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pytestpackage/test_terminal_class2.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -793,30 +922,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytestpackage/conftest.py">
+    <entry file="file://$PROJECT_DIR$/python_testing/test_terminal_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        <state relative-caret-position="1162">
+          <caret line="250" column="21" lean-forward="true" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Resources2.py">
+    <entry file="file://$PROJECT_DIR$/python_testing/Files/Resources.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="474">
+          <caret line="162" column="19" selection-start-line="162" selection-start-column="19" selection-end-line="162" selection-end-column="19" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/terminal_plus_complete_test_largedevices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/.pytest_cache/test_conftest_login.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/Resources2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="593" column="7" selection-start-line="593" selection-start-column="7" selection-end-line="593" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_generalActivity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_Invites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_logout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="285">
+          <caret line="136" column="7" lean-forward="true" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+          <folding>
+            <element signature="e#100#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_walkin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
