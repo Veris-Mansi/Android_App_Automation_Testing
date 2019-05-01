@@ -130,7 +130,7 @@ def setting_contact(driver):
     phone = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
     phone.click()
     contact_no = ""
-    i="2"
+    i="3"
     j="zeroButton"
     for k in range(5):
         driver.find_element_by_accessibility_id(i).click()
@@ -187,8 +187,8 @@ def setting_contact_member(driver):
     next = WebDriverWait(driver, 2, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "checkmark")))
     next.click()
     assert True
-"""
-def test_walkin(driver,walkin_details,status):
+
+def walkin_visitor(driver,walkin_details,status):
 
     user_action = TouchAction(driver)
     checkIn(driver)
@@ -237,7 +237,7 @@ def test_walkin(driver,walkin_details,status):
     check_out(driver, walkin_details)
     status_test = True
     statusOftest(status_test, driver)
-"""
+
 
 def camera(driver):
     image=WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "clickImageButton")))
@@ -394,7 +394,7 @@ def FLEP_auto_fetch_visitor(driver,visitor_details,contact_no):
 def Meeting_with_screen(driver):
 
     meeting = driver.find_element_by_accessibility_id('Whom To Meet')
-    driver.set_value(meeting, "tes")
+    driver.set_value(meeting, "man")
     #time.sleep(3)
     el=WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.XPATH, '//android.view.ViewGroup[@content-desc="losmansi sahu"]/android.view.ViewGroup/android.widget.TextView[1]')))
     el.click()
@@ -453,8 +453,8 @@ def takeScreenshot(driver):
     #//pytestpackage/screenshot
     #ts = time.strftime("%Y_%m_%d_%H::%M::%S")
     global i
-    ts = time.strftime("%Y_%m_%d_%H:%M:%S")
-    filename="./screenshots/test_"+str(i)+ts+'.png'
+    #ts = time.strftime("%Y_%m_%d_%H:%M:%S")
+    filename="./screenshots/test_"+str(i)+'.png'
 
     try:
 
@@ -628,16 +628,14 @@ def emergency_details_autofetch(driver,walkin_details):
         print("Emergency phone case failed")
     """
 def general_activity_dropdown(driver):
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located(
-        (By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup')))
+    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup')))
     f.click()
     # self.driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
     # time.sleep(1)
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]')))
+    time.sleep(0.5)
+    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup')))
     f.click()
-    """f = WebDriverWait(driver, 3, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,
-                                                                                                '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]')))
-    f.click()"""
+    time.sleep(0.5)
     # self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
     # time.sleep(2)
     f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located(
@@ -645,8 +643,8 @@ def general_activity_dropdown(driver):
     f.click()
     # self.driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
     # time.sleep(2)
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,
-                                                                                                '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]')))
+    time.sleep(0.5)
+    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,                                                                                 '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[5]/android.view.ViewGroup[1]')))
     f.click()
 
 def logout(driver):
