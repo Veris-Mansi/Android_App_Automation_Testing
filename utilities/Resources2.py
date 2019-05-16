@@ -55,13 +55,14 @@ def settingup():
         "status":"invite"
     }
     offline_walkin_details = {
-        "firstname": "offline_name",
-        "lastname": "test_surname",
-        "email": "test@test.com",
+        "firstname": "offone",
+        "lastname": "offtwo",
+        "email": "off@t.co",
         "unique_id": "test111",
         "address": "JMD",
         "Emergency_contact_name": "TOM",
-        "Emergency_contact": "9988776655"
+        "Emergency_contact": "9988776655",
+        "status": "offline"
     }
 
     data={}
@@ -97,10 +98,9 @@ def statusOftest(status_test,driver):
         a = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'Cancel')))
         a.click()
         time.sleep(1)
-        assert False
+        assert True
     else:
         print("test case passed")
-        assert True
 
 def permission_buttons(driver):
     for i in range(2):
@@ -119,7 +119,7 @@ def login(driver):
     time.sleep(0.5)
     driver.start_activity("com.veristerminal", ".MainActivity")
     #time.sleep(10)
-    element_id=WebDriverWait(driver, 10,poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"Authorization ID")))
+    element_id=WebDriverWait(driver, 20,poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"Authorization ID")))
     #element_id = driver.find_element_by_accessibility_id("Authorization ID")
     element_id.send_keys('N1')
     driver.hide_keyboard()
@@ -149,12 +149,12 @@ def setting_contact(driver):
     phone = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
     phone.click()
     contact_no = ""
-    i="8"
+    i="7"
     j="zeroButton"
-    for k in range(7):
+    for k in range(4):
         driver.find_element_by_accessibility_id(i).click()
         contact_no=contact_no+i
-    for k in range(3):
+    for k in range(6):
 
         driver.find_element_by_accessibility_id(j).click()
         if(j == 'zeroButton'):
@@ -207,56 +207,121 @@ def setting_contact_member(driver):
     next.click()
     assert True
 
-def walkin_visitor(driver,walkin_details,status):
+def walkin_visitor(driver,walkin_details):
+    try:
+        status = walkin_details['status']
+        user_action = TouchAction(driver)
+        checkIn(driver)
+        if (status == 'walkin'):
+            contact = setting_contact(driver)
 
-    user_action = TouchAction(driver)
-    checkIn(driver)
-    if(status == 'online'):
-        contact = setting_contact(driver)
+        elif (status == 'offline'):
+            contact = setting_contact_offline(driver)
 
-    elif(status == 'offline'):
-        contact = setting_contact_offline(driver)
+        visitor = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+            EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Visitor")))
+        takeScreenshot(driver)
+        if (visitor.is_displayed()):
+            assert True
+            visitor.click()
+        else:
+            assert False
+        camera(driver)
 
-    visitor = WebDriverWait(driver, 5, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Visitor")))
-    takeScreenshot(driver)
-    if (visitor.is_displayed()):
-        assert True
-        visitor.click()
-    else:
-        assert False
-    camera(driver)
+        FLEP_Screen(driver, walkin_details, contact)
+        if (status == 'walkin'):
+            Meeting_with_screen(driver)
+        elif (status == 'offline'):
+            Meeting_with_offline_screen(driver)
+        unique_id(driver, walkin_details['unique_id'])
+        gender_Screen(driver)
+        Multi_select_screen(driver)
+        GOVT_Id_Screen(driver)
+        single_dropdown_screen(driver)
+        driver.find_element_by_accessibility_id('Address').send_keys(walkin_details['address'])
+        driver.hide_keyboard()
+        emergency_contact(driver, walkin_details)
+        rating_Screen(driver)
+        time.sleep(0.05)
+        takeScreenshot(driver)
+        next = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+            EC.presence_of_element_located((By.ACCESSIBILITY_ID, "nextButton")))
+        next.click()
+        multi_tenant(driver)
+        NDA_screen(driver)
+        time.sleep(1)
+        takeScreenshot(driver)
+        user_action.tap(x=285, y=809).perform()
+        time.sleep(0.5)
+        user_action.tap(x=482, y=810).perform()
+        date_and_time(driver)
+        activity_complete(driver, walkin_details)
+        check_out(driver, walkin_details)
+        status_test = True
+        statusOftest(status_test, driver)
+    except:
+        status_test = False
+        takeScreenshotError(driver)
+        statusOftest(status_test, driver)
+        raise
 
-    FLEP_Screen(driver, walkin_details, contact)
-    Meeting_with_screen(driver)
-    unique_id(driver, walkin_details['unique_id'])
-    gender_Screen(driver)
-    Multi_select_screen(driver)
-    GOVT_Id_Screen(driver)
-    single_dropdown_screen(driver)
-    driver.find_element_by_accessibility_id('Address').send_keys(walkin_details['address'])
-    driver.hide_keyboard()
-    emergency_contact(driver, walkin_details)
-    rating_Screen(driver)
-    time.sleep(0.05)
-    takeScreenshot(driver)
-    driver.find_element_by_accessibility_id('nextButton').click()
-    a = WebDriverWait(driver, 5, poll_frequency=0.5).until(
-        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Mansi Test")))
-    takeScreenshot(driver)
-    a.click()
-    NDA_screen(driver)
-    time.sleep(1)
-    takeScreenshot(driver)
-    user_action.tap(x=285, y=809).perform()
-    time.sleep(0.5)
-    takeScreenshot(driver)
-    user_action.tap(x=482, y=810).perform()
-    date_and_time(driver)
-    activity_complete(driver, walkin_details)
-    check_out(driver, walkin_details)
-    status_test = True
-    statusOftest(status_test, driver)
+def autofetch_user(driver,walkin_details):
 
+    status=walkin_details['status']
+    try:
+        user_action = TouchAction(driver)
+        checkIn(driver)
+        if(status == 'walkin'):
+            contact = setting_contact(driver)
+        elif(status == 'offline'):
+            contact = setting_contact_offline(driver)
+        visitor = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Visitor")))
+        takeScreenshot(driver)
+        if (visitor.is_displayed()):
+            assert True
+            visitor.click()
+        else:
+            assert False
+        cameraretake(driver)
+        FLEP_auto_fetch_visitor(driver, walkin_details, contact)
+        if(status == 'walkin'):
+            Meeting_with_screen(driver)
+        elif (status == 'offline'):
+            Meeting_with_offline_screen(driver)
+        unique_id_autofetch(driver, walkin_details['unique_id'])
+        gender_Screen(driver)
+        Multi_select_screen(driver)
+        Govt_Id_Retake(driver)
+        single_dropdown_screen(driver)
+        address = driver.find_element_by_xpath(
+            '//android.view.ViewGroup[@content-desc="Address"]/android.widget.EditText')
+        my_address = address.text
+        print(my_address)
+        assert my_address == walkin_details['address']
+        emergency_details_autofetch(driver, walkin_details)
+        rating_Screen(driver)
+        time.sleep(0.05)
+        takeScreenshot(driver)
+        next = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+            EC.presence_of_element_located((By.ACCESSIBILITY_ID, "nextButton")))
+        next.click()
+        multi_tenant(driver)
+        NDA_screen(driver)
+        user_action.tap(x=285, y=809).perform()
+        time.sleep(0.5)
+        takeScreenshot(driver)
+        user_action.tap(x=482, y=810).perform()
+        date_and_time(driver)
+        activity_complete(driver, walkin_details)
+        check_out(driver, walkin_details)
+        status_test = True
+        statusOftest(status_test, driver)
+    except:
+        print("exception")
+        status_test = False
+        statusOftest(status_test, driver)
+        raise
 
 def camera(driver):
     image=WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, "clickImageButton")))
@@ -419,6 +484,15 @@ def Meeting_with_screen(driver):
     el.click()
     driver.hide_keyboard()
 
+def Meeting_with_offline_screen(driver):
+
+    meeting = driver.find_element_by_accessibility_id('Whom To Meet')
+    driver.set_value(meeting, "man")
+    #time.sleep(3)
+    el=WebDriverWait(driver, 2, poll_frequency=0.005).until(EC.presence_of_element_located((By.XPATH, '//android.view.ViewGroup[@content-desc="meetingWithDropdownField"]/android.view.ViewGroup')))
+    el.click()
+    driver.hide_keyboard()
+
 def unique_id(driver,uniqueid):
     driver.find_element_by_accessibility_id('Unique_id').send_keys(uniqueid)
 
@@ -462,6 +536,14 @@ def Multi_select_screen(driver):
     assert True
     #driver.find_element_by_accessibility_id('nextButton').click()
 
+def multi_tenant(driver):
+    s=WebDriverWait(driver, 10, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.XPATH, '//android.view.ViewGroup[@content-desc="searchBar"]/android.widget.EditText')))
+    s.send_keys('Man')
+    a = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Mansi Test")))
+    takeScreenshot(driver)
+    a.click()
 def takeScreenshot(driver):
     """ts=time.strftime("%Y_%m_%d_%H:%M:%S")
     activity=driver.current_activity
@@ -488,7 +570,7 @@ def takeScreenshot(driver):
 def takeScreenshotError(driver):
     global j
     j=1
-    filename = "./error/errtest_" + str(j) + '.png'
+    filename = "./errors/errtest_" + str(j) + '.png'
     try:
         driver.save_screenshot(filename)
         print("saved =>" + filename)
@@ -541,7 +623,7 @@ def NDA_screen(driver):
     #time.sleep(1)
     user_action=TouchAction(driver)
     user_action.press(x=240,y=791).move_to(x=369,y=739).release()
-    time.sleep(5)
+    time.sleep(1)
     takeScreenshot(driver)
     user_action.tap(x=375, y=989).perform()
     #time.sleep(2)
@@ -603,7 +685,6 @@ def activity_complete(driver,details):
     a=details['firstname']
     b=details['lastname']
     if(a in texts and b in texts):
-        assert True
         b = WebDriverWait(driver, 3, poll_frequency=0.005).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID,"activityCompletedButton")))
         takeScreenshot(driver)
         b.click()
@@ -626,6 +707,8 @@ def check_out(driver,details):
     elif (details['status'] == 'member'):
         setting_contact_member(driver)
 
+    elif (details['status'] == 'offline'):
+        setting_contact_offline(driver)
     #time.sleep(5)
     activity_complete(driver,details)
 
@@ -663,7 +746,14 @@ def general_activity_dropdown(driver):
         useraction = TouchAction(driver)
         e = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup')))
         e.click()
+        el = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]")))
+        el.click()
+        e2 = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,'(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup')))
+        e2.click()
+        e3 = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,                                                                                     '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[1]')))
+        e3.click()
 
+        """
         time.sleep(4)
         #useraction.tap(172, 196).perform()
         driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]').click()
@@ -675,6 +765,7 @@ def general_activity_dropdown(driver):
         time.sleep(4)
         driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[1]').click()
         #useraction.tap(270, 196).perform()
+        """
     except:
         print("Unable to select dropdown field")
         time.sleep(0.5)
