@@ -1,11 +1,10 @@
 
 import pytest
 from utilities.Resources2 import *
-
+import unittest
 
 @pytest.mark.usefixtures("data","driver")
-
-class TestLogin():
+class TestLogin(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
     def classSetup(self,data,driver):
@@ -16,6 +15,6 @@ class TestLogin():
         self.invited_details=data['invited_details']
 
     def test_login(self):
-        time.sleep(2)
-        login(self.driver)
-        assert True
+            time.sleep(2)
+            login(self.driver)
+            assert True
