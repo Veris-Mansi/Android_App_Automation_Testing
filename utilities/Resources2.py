@@ -19,7 +19,7 @@ def settingup():
 
         "app": "C:\\Users\\veris\\Downloads\\Latest_Release_Updated\\Terminal-Plus-release (4).apk",
         "platformName": "Android",
-        "deviceName": "a9a95ab4",
+        "deviceName": "92ddcb31",
         "appActivity": ".MainActivity",
         "appPackage": "com.veristerminal",
         "unicodeKeyboard": False,
@@ -28,9 +28,9 @@ def settingup():
         "appiumVersion": "1.12.1"
     }
     walkin_details = {
-        "firstname": "test_one",
-        "lastname": "test_surname",
-        "email": "test@test.com",
+        "firstname": "tone",
+        "lastname": "ttwo",
+        "email": "tt@st.com",
         "unique_id":"test111",
         "address":"JMD",
         "Emergency_contact_name":"TOM",
@@ -72,16 +72,35 @@ def settingup():
     data['offline_walkin_details']=offline_walkin_details
     return data
 
+def offline_mode(driver):
+    status = "offline"
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "settingsButton")))
+    settings.click()
+    code = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "authorizationCode")))
+    code.send_keys("1")
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "settings")))
+    settings.click()
+    settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "switchToOfflineMode")))
+    settings.click()
+    done = WebDriverWait(driver, 5, poll_frequency=0.5).until(
+        EC.presence_of_element_located((By.ACCESSIBILITY_ID, "Done")))
+    done.click()
+    time.sleep(0.5)
+    driver.toggle_wifi()
 def statusOftest(status_test,driver):
     if (status_test == False):
         print("test case failed")
-        a = WebDriverWait(driver, 10, poll_frequency=0.05).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'Cancel')))
+        a = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'Cancel')))
         a.click()
         time.sleep(1)
-        assert True
+        assert False
     else:
         print("test case passed")
-
+        assert True
 
 def permission_buttons(driver):
     for i in range(2):
@@ -130,12 +149,12 @@ def setting_contact(driver):
     phone = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.ACCESSIBILITY_ID, 'enterMobileNumber')))
     phone.click()
     contact_no = ""
-    i="3"
+    i="8"
     j="zeroButton"
-    for k in range(5):
+    for k in range(7):
         driver.find_element_by_accessibility_id(i).click()
         contact_no=contact_no+i
-    for k in range(5):
+    for k in range(3):
 
         driver.find_element_by_accessibility_id(j).click()
         if(j == 'zeroButton'):
@@ -466,6 +485,18 @@ def takeScreenshot(driver):
     i = i + 1
     #print("screenshot saved")
 
+def takeScreenshotError(driver):
+    global j
+    j=1
+    filename = "./error/errtest_" + str(j) + '.png'
+    try:
+        driver.save_screenshot(filename)
+        print("saved =>" + filename)
+
+    except NotADirectoryError:
+        print("Not a directory")
+    j = j + 1
+
 def single_dropdown_screen(driver):
 
     driver.find_element_by_accessibility_id('dropdownFormComponentField').click()
@@ -628,24 +659,28 @@ def emergency_details_autofetch(driver,walkin_details):
         print("Emergency phone case failed")
     """
 def general_activity_dropdown(driver):
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup')))
-    f.click()
-    # self.driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup').click()
-    # time.sleep(1)
-    time.sleep(0.5)
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup')))
-    f.click()
-    time.sleep(0.5)
-    # self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]').click()
-    # time.sleep(2)
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located(
-        (By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup')))
-    f.click()
-    # self.driver.find_element_by_xpath('(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup').click()
-    # time.sleep(2)
-    time.sleep(0.5)
-    f = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH,                                                                                 '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[5]/android.view.ViewGroup[1]')))
-    f.click()
+    try:
+        useraction = TouchAction(driver)
+        e = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[1]/android.view.ViewGroup')))
+        e.click()
+
+        time.sleep(4)
+        #useraction.tap(172, 196).perform()
+        driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]').click()
+        #	(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup
+        time.sleep(3)
+        g=driver.find_element_by_xpath('//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup')
+        #g = WebDriverWait(driver, 5, poll_frequency=0.5).until(EC.presence_of_element_located((By.XPATH, '(//android.view.ViewGroup[@content-desc="dropdownFormComponentField"])[2]/android.view.ViewGroup')))
+        g.click()
+        time.sleep(4)
+        driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[1]').click()
+        #useraction.tap(270, 196).perform()
+    except:
+        print("Unable to select dropdown field")
+        time.sleep(0.5)
+        #e=driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button').click()
+        #e.click()
+        raise
 
 def logout(driver):
     settings = WebDriverWait(driver, 5, poll_frequency=0.5).until(

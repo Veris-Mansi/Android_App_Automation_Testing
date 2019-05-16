@@ -2,12 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85047499-b5f9-47f2-8498-0cefc01eeff0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pytestpackage/test_conftest_Invites.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytestpackage/test_conftest_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytestpackage/test_conftest_logout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytestpackage/test_conftest_walkin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytestpackage/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/pytestpackage/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_78.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_79.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytestpackage/screenshots/test_9.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilities/Resources2.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/Resources2.py" afterDir="false" />
     </list>
@@ -46,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="284" column="24" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="24" />
+            <state relative-caret-position="1190">
+              <caret line="320" column="12" lean-forward="true" selection-start-line="320" selection-start-column="12" selection-end-line="320" selection-end-column="12" />
               <folding>
                 <element signature="e#100#113#0" expanded="true" />
               </folding>
@@ -58,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Resources2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="267" column="15" selection-start-line="267" selection-start-column="4" selection-end-line="267" selection-end-column="15" />
+            <state relative-caret-position="210">
+              <caret line="488" column="12" lean-forward="true" selection-start-line="488" selection-start-column="12" selection-end-line="488" selection-end-column="12" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -78,36 +153,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>settin</find>
-      <find>statusO</find>
-      <find>FLEP_auto_fetch_member</find>
-      <find>activity</find>
-      <find>setting_contact_member</find>
-      <find>activity_comp</find>
-      <find>takeScree</find>
-      <find>setting</find>
-      <find>setting_c</find>
-      <find>activ</find>
-      <find>emergency_details_autofetch</find>
-      <find>FLEP_auto_fetch_visitor</find>
-      <find>login</find>
-      <find>auto_</find>
-      <find>setting_con</find>
-      <find>FLEP_aut</find>
-      <find>logo</find>
-      <find>check_out</find>
-      <find>activity_com</find>
-      <find>check</find>
       <find>activity_co</find>
-      <find>general_activity_dropdown</find>
       <find>setting_contact</find>
-      <find>takeScreenshot</find>
       <find>gender_Screen</find>
       <find>gen</find>
       <find>genera</find>
-      <find>logout</find>
-      <find>setting_</find>
       <find>FLEP_Screen</find>
+      <find>setting_</find>
+      <find>walk</find>
+      <find>meet</find>
+      <find>walkin_vis</find>
+      <find>takeScre</find>
+      <find>setting_con</find>
+      <find>setting_conta</find>
+      <find>Meeting</find>
+      <find>login</find>
+      <find>test_general_activity_walkin</find>
+      <find>statusOftest</find>
+      <find>general_activity_dropdown</find>
+      <find>walkin_visitor</find>
+      <find>memb</find>
+      <find>meeting</find>
+      <find>logout</find>
+      <find>gene</find>
+      <find>setting_co</find>
+      <find>Meeting_with_screen</find>
+      <find>takeScreenshot</find>
+      <find>gener</find>
+      <find>statusO</find>
+      <find>user_action.</find>
+      <find>error</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,8 +257,7 @@
             <path>
               <item name="Test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\veris\PycharmProjects\Test1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="pytestpackage" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="screenshots" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="utilities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -230,7 +304,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utilities" />
+    <property name="last_opened_file_path" value="D:/mvn-python-packaging-master" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -482,7 +556,12 @@
       <workItem from="1556284462961" duration="38287000" />
       <workItem from="1556512431073" duration="2314000" />
       <workItem from="1556519512407" duration="27962000" />
-      <workItem from="1556605848288" duration="23426000" />
+      <workItem from="1556605848288" duration="23854000" />
+      <workItem from="1556691336058" duration="10074000" />
+      <workItem from="1556718217650" duration="2130000" />
+      <workItem from="1556779016096" duration="614000" />
+      <workItem from="1557901407092" duration="21037000" />
+      <workItem from="1557978807868" duration="4973000" />
     </task>
     <servers />
   </component>
@@ -510,7 +589,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391331000" />
+    <option name="totallyTimeSpent" value="430587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,7 +604,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5714286" visible="true" weight="0.18882175" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5714286" weight="0.2031722" />
       <window_info id="Favorites" order="1" sideWeight="0.42857143" side_tool="true" weight="0.25528702" />
       <window_info id="Structure" order="2" sideWeight="0.504717" weight="0.19486405" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -538,8 +617,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151056" side_tool="true" weight="0.3843648" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848944" visible="true" weight="0.262215" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022659" side_tool="true" weight="0.28664497" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49773413" visible="true" weight="0.27198696" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.38925081" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -548,7 +627,7 @@
       <window_info anchor="right" id="Database" order="4" side_tool="true" weight="0.32930514" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5714286" visible="true" weight="0.10271903" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5714286" visible="true" weight="0.2031722" />
       <window_info id="Favorites" order="1" sideWeight="0.42857143" side_tool="true" weight="0.25528702" />
       <window_info id="Structure" order="2" sideWeight="0.504717" weight="0.19486405" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -561,29 +640,18 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151056" side_tool="true" weight="0.3843648" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848944" visible="true" weight="0.24592833" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022659" side_tool="true" weight="0.28664497" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49773413" visible="true" weight="0.23127036" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.38925081" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32930514" />
       <window_info anchor="right" id="Database" order="4" side_tool="true" weight="0.32930514" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test1$Unittests_for_test_terminal_class_TestTerminal_test_login.coverage" NAME="Unittests for test_terminal_class.TestTerminal.test_login Coverage Results" MODIFIED="1556173448433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_testing" />
@@ -605,75 +673,6 @@
     <SUITE FILE_PATH="coverage/Test1$terminal_plus_complete_test.coverage" NAME="terminal_plus_complete_test Coverage Results" MODIFIED="1555916007689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/automation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="17" selection-start-column="23" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/React_Native_test.py" />
-    <entry file="file://$PROJECT_DIR$/FlipkartappTesting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Liveapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liveappupdated.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-664">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/terminal_tab_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/terminal_plus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-715">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/terminal_plus_all.py" />
-    <entry file="file://$PROJECT_DIR$/terminal_plus3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QR_code/Qr_code.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -692,13 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4097">
           <caret line="241" selection-start-line="241" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QR_Code_Scanning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -729,13 +721,6 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/appium/webdriver/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="441" selection-start-line="441" selection-end-line="441" />
         </state>
       </provider>
     </entry>
@@ -805,9 +790,6 @@
     <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_142943.MainActivity.png" />
     <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_142929.MainActivity.png" />
     <entry file="file://$PROJECT_DIR$/pytestpackage/Screenshots2019_04_29_142920.MainActivity.png" />
-    <entry file="file://$PROJECT_DIR$/pytestpackage/report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pytestpackage/test_terminal_class2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -899,16 +881,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test.png">
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test.png" />
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/ts.png" />
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/ts.png">
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_3.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QR_Code_Scanning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_10.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytestpackage/screenshots/test_11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/appium/webdriver/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="434" column="7" selection-start-line="434" selection-start-column="7" selection-end-line="434" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Resources2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="267" column="15" selection-start-line="267" selection-start-column="4" selection-end-line="267" selection-end-column="15" />
+        <state relative-caret-position="210">
+          <caret line="488" column="12" lean-forward="true" selection-start-line="488" selection-start-column="12" selection-end-line="488" selection-end-column="12" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -917,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pytestpackage/test_conftest_walk_in.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="284" column="24" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="24" />
+        <state relative-caret-position="1190">
+          <caret line="320" column="12" lean-forward="true" selection-start-line="320" selection-start-column="12" selection-end-line="320" selection-end-column="12" />
           <folding>
             <element signature="e#100#113#0" expanded="true" />
           </folding>
